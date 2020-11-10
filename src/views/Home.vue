@@ -5,15 +5,14 @@
         <h1>米UI</h1>
         <h2>一个很牛逼UI框架</h2>
         <p class="actions">
-            <a href="#/doc">开始</a>
-
+            <router-link to="/doc">开始</router-link>
             <a href="https://github.com/minured/vue3UI">Github</a>
         </p>
     </div>
 </div>
 </template>
 
-<script>
+<script lang="ts">
 import TopNav from "../components/TopNav.vue";
 export default {
     components: {

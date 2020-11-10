@@ -1,10 +1,8 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import Hello from "./components/Hello.vue";
-import Hello2 from "./components/Hello2.vue";
 import Home from "./views/Home.vue";
 import Doc from "./views/Doc.vue";
-import "./index.css";
+import "./index.scss";
 
 import { createWebHashHistory, createRouter } from "vue-router";
 
@@ -16,7 +14,7 @@ const router = createRouter({
     { path: "/home", component: Home },
     {
       path: "/doc",
-      component: Doc,
+      component: Doc
     },
   ],
 });
