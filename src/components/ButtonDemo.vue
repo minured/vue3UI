@@ -6,10 +6,14 @@
       @onClick="handleButtonClick"
       @onFocus="handleBtnFocus"
       @onMouseover="handleBtnMouseover"
-      :idDark="true"
+      :isDark="true"
+      @click="onClick"
     >
       默认
     </Button>
+    <Button theme='default'>默认</Button>
+    <Button theme='link'>链接</Button>
+    <Button theme='text'>文本</Button>
   </div>
 </template>
 
@@ -27,13 +31,17 @@ export default {
     const handleBtnMouseover = () => {
       console.log("mouseover");
     };
+    const onClick = () => {
+      console.log("attrs click");
+    };
     return {
       handleBtnMouseover,
       handleBtnFocus,
       handleButtonClick,
+      onClick,
     };
   },
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
