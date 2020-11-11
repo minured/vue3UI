@@ -19,7 +19,7 @@
           </li>
         </ol>
       </aside>
-      <main>
+      <main @click="onMainClick">
         <router-view />
       </main>
     </div>
@@ -37,9 +37,19 @@ export default {
 
   setup() {
     const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
-    const screenWidth = inject<Ref<boolean>>("screenWidth");
+    const screenWidth = inject<Ref<number>>("screenWidth");
+    const onAsideItemClick = () => {
+      if (screenWidth.value > 500) return;
+      menuVisible.value = false;
+    };
+    const onMainClick = () => {
+      if (screenWidth.value > 500) return;
+      menuVisible.value = false;
+    };
     return {
       menuVisible,
+      onMainClick,
+      onAsideItemClick,
     };
   },
 };
