@@ -2,7 +2,7 @@
   <div class="layout">
     <TopNav class="nav" />
     <div class="content">
-      <aside v-if="menuVisible">
+      <aside v-if="menuVisible" class="aside">
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -73,6 +73,9 @@ export default {
 
     @media (max-width: 500px) {
       padding-left: 0;
+    }
+    .aside {
+      z-index: 1;
     }
   }
 }

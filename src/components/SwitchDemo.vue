@@ -1,6 +1,6 @@
 <template>
   <div>
-    switch文档
+    <h1>示例1</h1>
     <!-- 新版v-model，类似之前的.sync修饰符，emit触发的事件名规定 update:value  -->
     <Switch v-model:value="switchValue" />
   </div>
